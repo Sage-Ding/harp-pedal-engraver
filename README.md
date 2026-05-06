@@ -1,4 +1,4 @@
-# Harp Pedal Engraver by Sage Ding @ Northwestern University
+# Harp Pedal Engraver by Sage Ding
 
 I wrote this because I got tired of marking pedal changes by hand.
 
