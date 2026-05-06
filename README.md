@@ -95,6 +95,7 @@ The loop ordering within Pass 2 matters: detection and placement happen before `
 **No glissando handling.** Before a glissando, all 7 pedals need to be set to match the required scale before the gliss starts. The plugin doesn't detect glissandos or give them higher-priority placement.
 
 ## License
+GPL v2
 
 ## Development notes
 A few parts of the code in this project were written and formatted with AI assistance (Claude by Anthropic).
