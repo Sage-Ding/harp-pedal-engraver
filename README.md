@@ -30,7 +30,7 @@ The plugin produces:
 
 ## Requirements
 
-MuseScore 3.3 or later. The plugin uses `rewindToTick()` which was introduced in 3.3 — older builds fall back to a linear walk that's less reliable on scores with irregular rhythms or grace notes.
+MuseScore 3.3 or later. The plugin uses `rewindToTick()` which was introduced in 3.3: older builds fall back to a linear walk that's less reliable on scores with irregular rhythms or grace notes.
 
 ## Installation
 
