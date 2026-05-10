@@ -82,10 +82,10 @@ MuseScore {
 
     // vertical positions of the four label rows in staff spaces, positive = down
     // these stack in the gap between treble and bass staves
-    property real normalLeftY:  5.5   // D C B changes, no buzz risk
-    property real warnLeftY:    7.0   // D C B changes, warning
+    property real normalLeftY: 5.5   // D C B changes, no buzz risk
+    property real warnLeftY: 7.0   // D C B changes, warning
     property real normalRightY: 8.5   // E F G A changes, no buzz risk
-    property real warnRightY:   10.0  // E F G A changes, warning
+    property real warnRightY: 10.0  // E F G A changes, warning
 
 
     // returns true if this Part is a harp
@@ -118,7 +118,7 @@ MuseScore {
         var base = { C:14, D:16, E:18, F:13, G:15, A:17, B:19 }
         for (var n in base) {
             if (tpc === base[n] - 7) return { name: n, state: -1 }
-            if (tpc === base[n]    ) return { name: n, state:  0 }
+            if (tpc === base[n]) return { name: n, state:  0 }
             if (tpc === base[n] + 7) return { name: n, state:  1 }
         }
         return null
@@ -167,23 +167,23 @@ MuseScore {
 
 
     function makeInitDiagram(p) {
-        var el       = newElement(Element.STAFF_TEXT)
-        el.text      = diagramText(p)
-        el.fontFace  = "Bravura Text"
-        el.fontSize  = 20
+        var el = newElement(Element.STAFF_TEXT)
+        el.text = diagramText(p)
+        el.fontFace = "Bravura Text"
+        el.fontSize = 20
         el.autoplace = false
-        el.offsetY   = diagramOffsetY
+        el.offsetY = diagramOffsetY
         return el
     }
 
 
     function makeChangeLabel(txt, yOff, isWarn) {
-        var el       = newElement(Element.STAFF_TEXT)
-        el.text      = isWarn ? ("\u26A0 " + txt) : txt
-        el.fontSize  = 9
-        el.italic    = true
+        var el = newElement(Element.STAFF_TEXT)
+        el.text = isWarn ? ("\u26A0 " + txt) : txt
+        el.fontSize = 9
+        el.italic = true
         el.autoplace = false
-        el.offsetY   = yOff
+        el.offsetY = yOff
         return el
     }
 
@@ -194,7 +194,7 @@ MuseScore {
     function sortByName(arr) {
         for (var a = 1; a < arr.length; a++) {
             var key = arr[a]
-            var b   = a - 1
+            var b = a - 1
             while (b >= 0 && arr[b].name > key.name) {
                 arr[b + 1] = arr[b]
                 b--
@@ -373,12 +373,12 @@ MuseScore {
                         dList.push({ name: nn, state: demanded[nn] })
 
                     events.push({
-                        tick:        tick,
-                        demands:     dList,
-                        hasNote:     hasNote,
-                        hasRest:     hasRest,
+                        tick: tick,
+                        demands: dList,
+                        hasNote: hasNote,
+                        hasRest: hasRest,
                         noteDensity: noteCount,
-                        atBarline:   atBarline
+                        atBarline: atBarline
                     })
                 }
                 seg = seg.next
