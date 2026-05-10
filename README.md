@@ -8,7 +8,7 @@ So I built a plugin that reads the whole score and figures it out automatically.
 
 It places an opening pedal diagram at bar 1 and then marks every subsequent change throughout the piece, with ⚠ warnings on any spot where the string might still be ringing when the pedal needs to move. It ignores all other instruments and only looks at the harp staves, and if you have multiple harps in the score it handles each one independently.
 
-I'm an incoming student at Northwestern studying Applied Mathematics and Harp Performance, which is basically why this ended up being more algorithmic than it probably needed to be. The placement logic uses a scoring function that weighs advance notice, rest texture, string activity, and note density to find the best spot for each label rather than just dumping everything on the deadline note.
+The placement logic uses a scoring function that weighs advance notice, rest texture, string activity, and note density to find the best spot for each label rather than just dumping everything on the deadline note.
 
 It's still a work in progress. The look-ahead placement is the next thing I want to fix: right now labels land at the exact moment the new note arrives instead of a measure or two beforehand, which is the whole point of pedal markings in professional scores. That's the main open issue.
 
